@@ -5,7 +5,7 @@ from statsmodels.tsa.seasonal import seasonal_decompose
 
 
 #data loading and preprocessing 
-raw_data = pd.read_csv("raw_data.csv", usecols= ['MONATSZAHL', 'AUSPRAEGUNG', 'JAHR', 'MONAT', 'WERT'])
+raw_data = pd.read_csv(r"data/raw_data.csv", usecols= ['MONATSZAHL', 'AUSPRAEGUNG', 'JAHR', 'MONAT', 'WERT'])
 def data_prep(*args):
     df_data = raw_data[raw_data['JAHR'] <= 2020]
     df_filtered = df_data.copy()
